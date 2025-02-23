@@ -2,16 +2,16 @@ body {
     margin: 0;
     padding: 0;
     color: rgb(0, 0, 0);
-    font-family: sans-serif; 
+    font-family: "Athelia Pro", serif;
 
     background-image: url(/Assets/newback.png);
     background-size: cover;
-    background-position: center;
+    background-attachment: fixed;
     background-repeat: no-repeat;
 }
 
 @font-face {
-    font-family: "sans-serif";
+    font-family: "Athelia Pro";
     src: url(/font/alethiapro-regular.otf);
     font-weight: normal;
     font-style: normal;
@@ -22,7 +22,6 @@ html {
     scroll-behavior: smooth;
 }
 
-/*Background img section*/
 
 /*Home section*/
 
@@ -30,7 +29,7 @@ html {
     height: 100vh;
     width: 100%;
     display: flex;
-    justify-content: center;
+    justify-content: left;
     align-items: center;
     position: relative;
 }
@@ -38,48 +37,50 @@ html {
 .container {
     height: fit-content;
     text-align: center;
+    padding-left: 3vw;
 }
 
-.container img {
-    width: 7vw;
-    transition: transform 0.3s ease;
-    filter: invert(1);
-}
-
-.container img:hover {
-    transform: translateY(20px);
-}
 
 .container h1 {
-    font-size: 13vw;
+    font-size: 7.5vw;
+    font-weight: 100;
     margin: 1vw 0;
-    font-weight: 500;
-    font-family: "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+    letter-spacing: 1vw;
+    font-family: "Athelia Pro", serif;
+
+    background: linear-gradient(to right, #fc72ff, #8f68ff, #487bff, #8f68ff, #fc72ff);
+    background-size: 200%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: animate-gradient 2.5s linear infinite;
+}
+
+@keyframes animate-gradient {
+    to {
+        background-position: 200%;
+    }
 }
 
 .container h2 {
-    font-size: 1.5vw;
-    font-weight: 200;
-    font-size: 2vw;
-    color: black;
-}
-
-.container h3 {
-    font-family: 'Agency FB', sans-serif;
     font-size: 3vw;
-    font-weight: normal;
+    font-weight: 100;
+    letter-spacing: 2.5vw;
+    font-family: "Athelia Pro", serif;
 }
 
 
 /*Navbar section*/
 .navbar {
     display: flex;
-    position: fixed;
-    z-index: 1;
-    height: 10vh;
+    justify-content: space-between;
     align-items: center;
     padding: 0 3vw;
+    height: 5vw;
+    position: fixed;
+    top: 0;
     right: 0;
+    z-index: 1;
 }
 
 .navbar i {
@@ -88,19 +89,20 @@ html {
 
 .menu {
     display: flex;
-    gap: 3vw;
+    gap: 4.2vw;
 }
 
 .menu a {
     text-decoration: none;
-    font-size: 1.5vw;
-    color: white;
+    font-size: 1.2vw;
+    color: rgb(0, 0, 0);
     transition: 0.3s ease;
 }
 
-.menu a:hover,
-.menu a.active {
-    color: black;
+.menu a:hover {
+    background: linear-gradient(to right, #ff97dc, #91aeff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 /*area section*/
@@ -173,28 +175,38 @@ html {
     padding: 4vw 0;
     color: black;
     flex-wrap: wrap;
-    font-family: "Agency FB";
+    font-family: "Athelia Pro", serif;
+}
+
+.email img{
+    transition: transform 0.3s ease;
+    margin-bottom: 2vw;
+}
+
+.email img:hover{
+    transform: translateY(15px);
 }
 
 #email {
-    font-size: 1.5vw;
+    font-size: 1vw;
     font-weight: 500;
     margin-bottom: 2vw;
     border: solid 0.1vw black;
     height: 2vw;
     align-items: center;
     border-radius: 0.3vw;
-    font-family: "Agency FB";
+    font-family: "Athelia Pro", serif;
+    width: 20vw;
 }
 
 #submit {
-    height: 2.4vw;
-    font-size: 1.5vw;
+    height: 2.3vw;
+    font-size: 1vw;
     background-color: black;
     color: white;
     border-style: none;
     border-radius: 0.3vw;
-    font-family: "Agency FB";
+    font-family: "Athelia Pro", serif;
 }
 
 #submit:hover {
@@ -211,7 +223,7 @@ html {
     display: flex;
     align-items: center;
     flex-direction: column;
-    font-family: "Agency FB";
+    font-family: "Athelia Pro", serif;
 }
 
 .text a {
@@ -250,10 +262,11 @@ html {
     border-radius: 0.5vw;
 }
 
-.copy h3 {
+.copy h4 {
     font-weight: 100;
     text-align: center;
     color: rgb(75, 75, 75);
+    margin: 1vw 0;
 }
 
 /*Media query section*/

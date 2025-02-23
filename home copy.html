@@ -15,10 +15,11 @@
 <body>
 
     <div class="navbar">
+
         <div class="menu">
-            <a href="#home" class="active">Home</a>
-            <a href="#area">Portfolio</a>
-            <a href="/about.html">About</a>
+            <a href="#home" class="active">HOME</a>
+            <a href="#area">PORTFOLIO</a>
+            <a href="/about.html">ABOUT</a>
         </div>
         <i class="ri-menu-3-line"></i>
     </div>
@@ -26,10 +27,9 @@
     <section id="home">
         <div class="container">
             <h1>REFLEXION</h1>
-            <h2>INDEPENDENT 3D ARTIST,</h2>
-            <h3>TURNING CONCEPTS INTO IMMERSIVE ART</h3>
-            <a href="#area"><img src="/Assets/arrow-down-long-solid.svg" alt="arrow"></a>
+            <h2>3D ARTIST</h2>
         </div>
+
     </section>
 
     <section id="area">
@@ -143,8 +143,8 @@
             <h2>WANT SOME INBOX LOVE?</h2>
 
             <div class="inputs">
-                <input type="text" placeholder="Email address" id="email">
-                <button id="submit">Submit</button>
+                <input type="text" placeholder="EMAIL ADDRESS" id="email">
+                <button id="submit">SUBMIT</button>
             </div>
 
         </div>
@@ -173,8 +173,10 @@
         </div>
 
         <div class="copy">
-            <h3>SITE BY SHREYASH SHIRSAT <br> COPYRIGHT © 2025, REFLEXION <br> TERMS AND CONDITIONS | PRIVACY | LEGAL
-                NOTICE</h3>
+            <h4>SITE BY SHREYASH SHIRSAT </h4>
+            <h4>COPYRIGHT © 2025, REFLEXION</h4>
+            <h4>TERMS AND CONDITIONS | PRIVACY | LEGAL
+                NOTICE</h4>
         </div>
     </div>
 
@@ -182,27 +184,6 @@
         //document.addEventListener('contextmenu', function (e) {
         //    e.preventDefault();
         //});
-
-        document.addEventListener('DOMContentLoaded', function () {
-            let sections = document.querySelectorAll('section');
-            let navLinks = document.querySelectorAll('.navbar .menu a');
-
-            window.onscroll = () => {
-                sections.forEach(sec => {
-                    let top = window.scrollY;
-                    let offset = sec.offsetTop;
-                    let height = sec.offsetHeight;
-                    let id = sec.getAttribute('id');
-
-                    if (top >= offset && top < offset + height) {
-                        navLinks.forEach(link => {
-                            link.classList.remove('active');
-                            document.querySelector('.navbar .menu a[href*=' + id + ']').classList.add('active');
-                        });
-                    }
-                });
-            };
-        });
     </script>
 
 
